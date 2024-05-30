@@ -1,0 +1,77 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTop {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutBottom {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.caviar-about-us-area {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col-12 {
+  padding: 15px;
+}
+
+.col-md-5,
+.col-md-6,
+.col-lg-5 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-5 {
+    width: 41.666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .ml-md-auto {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-5 {
+    width: 41.666667%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

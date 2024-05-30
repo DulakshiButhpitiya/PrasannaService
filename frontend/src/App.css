@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.full-page-div {
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+  }
+
+.full-page-div-width{
+    width: 100vw; /* 100% of the viewport width */
+}

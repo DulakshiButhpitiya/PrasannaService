@@ -1,0 +1,173 @@
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: auto;
+    max-height: 620px; /* Increased height to accommodate new fields */
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.wrapper.active {
+    height: 620px; /* Increased height to accommodate new fields */
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper.form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 45px 15px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.form .remember-forgot {
+    display: flex;
+    flex-direction: column; /* Changed to column layout */
+    align-items: center; 
+    font-size: 14px;
+    margin: 10px 0; 
+}
+
+.checkbox-container {
+    margin-top: 5px;
+}
+
+.remember-forgot label input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.remember-forgot label input:checked {
+    background-color: #fff;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+form .register-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+ 
+.body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../Assets/background') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .checkbox-container label {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
+  }
+  
+  .checkbox-container a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 80px;
+    
+  }
+  
