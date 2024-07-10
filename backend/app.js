@@ -102,6 +102,9 @@ app.use('/api', packageRoutes);
 app.use('/api/spareparts', sparePartRoutes); // Use package routes
 app.use('/api/bookings', booking1Routes);
 
+
+app.use("/uploads",express.static("./file"))
+
 // Port
 const port = 4000;
 app.listen(port, () => {

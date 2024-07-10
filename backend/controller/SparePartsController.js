@@ -3,7 +3,21 @@ const SparePart = require('../Models/SparePartsModel');
 // Create a new spare part
 exports.createSparePart = async (req, res) => {
     try {
-        const newSparePart = new SparePart(req.body);
+        const { itemNo, itemCode, modelNo, description, quantity, prices, brand, bikeModel } = req.body;
+        const file = req.file; // Get the uploaded file
+
+        const newSparePart = new SparePart({
+            itemNo,
+            itemCode,
+            modelNo,
+            description,
+            quantity,
+            prices,
+            brand,
+            bikeModel,
+            imageUrl: file ? file.path : null // Save the file path
+        });
+
         await newSparePart.save();
         res.status(201).json(newSparePart);
     } catch (error) {

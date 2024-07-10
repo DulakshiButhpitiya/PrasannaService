@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import TableBooking from '../component/newComponent/TableBooking';
-import { Accordion } from 'react-bootstrap';
 import '../Pages/Spareparts.css';
-import About from '../component/Assets/contacct.jpg';
-import AboutUs from '../component/newComponent/AboutUs';
 
 const Spareparts = () => {
   const [formData, setFormData] = useState({
@@ -18,17 +11,25 @@ const Spareparts = () => {
     quantity: '',
     prices: '',
     brand: '',
-    bikeModel: ''
+    bikeModel: '',
+    file: null
   });
 
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    if (name === 'file') {
+      setFormData({
+        ...formData,
+        [name]: e.target.files[0]
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   const validate = () => {
@@ -48,8 +49,23 @@ const Spareparts = () => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
-      // Add your form submission logic here
+      const formDataToSubmit = new FormData();
+      for (const key in formData) {
+        formDataToSubmit.append(key, formData[key]);
+      }
+      fetch('/api/spareparts/', {
+        method: 'POST',
+        body: formDataToSubmit
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        // Handle success
+      })
+      .catch(error => {
+        console.error(error);
+        // Handle error
+      });
     } else {
       setErrors(validationErrors);
     }
@@ -159,15 +175,11 @@ const Spareparts = () => {
           <Form.Label>File</Form.Label>
           <Form.Control
             type="file"
-            required
             name="file"
             onChange={handleChange}
-            isInvalid={!!errors.file}
             className="border-2 border-blue-500"
           />
-          <Form.Control.Feedback type="invalid" tooltip>
-            {errors.file}
-          </Form.Control.Feedback>
+          {errors.file && <p className="text-red-500 text-sm">{errors.file}</p>}
         </Form.Group>
         <button
           type="submit"
