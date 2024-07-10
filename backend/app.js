@@ -11,9 +11,18 @@ const itemRoutes = require('./routes/ItemRoutes');
 const offerRoutes = require('./routes/OfferRoutes');
 const packageRoutes = require('./routes/PackageRoutes');
 const sparePartRoutes = require('./routes/SparePartsRoutes');
-const booking1Routes = require('./routes/booking1Routes');
+const appointmentRoutes = require('./routes/appoinmentRoutes');
+const feedbackRoutes = require('./routes/FeedbackRoutes')
+
 
 const app = express();
+const corsOption = {
+  origin: 'http://localhost:3000',
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true,
+};
+
 
 // Database connection
 const DATABASE_URI = "mongodb://0.0.0.0:27017/servicesystem";
@@ -28,7 +37,7 @@ mongoose.connect(DATABASE_URI, {
 
 // Middleware
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOption));
 app.use(express.json());
 
 // API Endpoints
@@ -51,7 +60,7 @@ app.get('/user/:email', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
-// Example in Node.js/Express
+
 app.post('/user/register', async (req, res) => {
   try {
     // Check if the email already exists
@@ -68,7 +77,6 @@ app.post('/user/register', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
 
 app.get('/api/users', async (req, res) => {
   try {
@@ -99,11 +107,12 @@ app.use('/api', userRoutes);
 app.use('/api', itemRoutes);
 app.use('/api', offerRoutes);
 app.use('/api', packageRoutes);
-app.use('/api/spareparts', sparePartRoutes); // Use package routes
-app.use('/api/bookings', booking1Routes);
+app.use('/api', sparePartRoutes); 
+   app.use('/api', appointmentRoutes);
+// Static images folder
+app.use("/Images", express.static("./images"));
+app.use('/api/feedback', feedbackRoutes); // Use the feedback route
 
-
-app.use("/uploads",express.static("./file"))
 
 // Port
 const port = 4000;

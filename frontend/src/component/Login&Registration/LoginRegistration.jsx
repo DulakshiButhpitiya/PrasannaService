@@ -28,8 +28,8 @@ const LoginRegistration = () => {
       if (response.ok) {
         if (data.role === 1) {
           navigate('/home');
-        }if(data.role===0) {
-          navigate('#')
+        }if(data.role!=0) {
+          navigate('/admin/Dashboard')
         }else {
           console.log('Login successful:', data);
         }

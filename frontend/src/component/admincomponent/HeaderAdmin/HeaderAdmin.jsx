@@ -7,7 +7,7 @@ const HeaderAdmin = () => {
   return (
     <header className="bg-gray-800 text-white flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center">
-        <img src="/path/to/logo.png" alt="CoreUI React.js" className="h-8 w-8 mr-2" />
+        <img src="component/Assets/P (2).jpg" alt="CoreUI React.js" className="h-8 w-8 mr-2" />
         <span className="font-semibold text-xl">Admin Dashboard</span>
       </div>
       <nav className="flex space-x-4">

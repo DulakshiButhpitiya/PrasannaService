@@ -9,21 +9,21 @@
   background-position: center;
 }
 
-.aboutBottom {
+/* .aboutBottom {
   padding: 20px;
   background-color: #f9f9f9;
-}
+} */
 
-.caviar-about-us-area {
+/* .caviar-about-us-area {
   padding: 50px 0;
   overflow: hidden;
-}
+} */
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
+} */
 
 .row {
   display: flex;

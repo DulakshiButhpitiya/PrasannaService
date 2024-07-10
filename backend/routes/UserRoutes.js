@@ -11,10 +11,10 @@ router.post('/signin',UserController.signInUser);
 
 
 // Fetch all users
-router.get('/all', UserController.getAllUsers);
+router.get('/users', UserController.getAllUsers);
 
-//Create a new feedback
-router.post('/feedback',UserController.createFeedback);
 
+// Create feedback
+router.post('/feedback', UserController.createFeedback);
 
 module.exports = router;

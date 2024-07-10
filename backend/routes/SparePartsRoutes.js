@@ -6,14 +6,16 @@ const {
   updateSparePart,
   deleteSparePart
 } = require('../controller/SparePartsController');
-const upload = require('../multer/Multer'); // Import the multer configuration
+const upload = require('../config/Multerconfig'); // Import the multer configuration
 
 const router = express.Router();
 
-router.post('/', upload.single("file"), createSparePart);
-router.get('/', getAllSpareParts);
-router.get('/:id', getSparePartById);
-router.put('/:id', updateSparePart);
-router.delete('/:id', deleteSparePart);
+
+router.post('/spareparts', upload.single('image'), createSparePart);
+router.get('/spareparts', getAllSpareParts);
+router.get('/spareparts/:id', getSparePartById);
+router.put('/spareparts/:id', updateSparePart);
+router.delete('/spareparts/:id', deleteSparePart);
+
 
 module.exports = router;

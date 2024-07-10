@@ -13,11 +13,16 @@ const Reg = () => {
     password: '',
     confirmPassword: ''
   });
+  
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+
+  // const { login } = useAuth();
+  // const history = useHistory();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

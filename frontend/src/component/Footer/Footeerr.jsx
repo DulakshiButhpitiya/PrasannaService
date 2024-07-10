@@ -18,10 +18,10 @@ const Footeerr = () => {
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-2xl font-bold">Contact Us</h2>
             <p className="mt-4 text-gray-700">
-              We are here to meet any business need and to promote your company online!
+            Get a professional mechanic for two-wheeler service, doorstep bike repair, engine care, engine repair, EV Bike Repair, and much more.
             </p>
             <div className="mt-6 space-y-2">
-              <p className="text-lg"><strong>Phone:</strong> 077 224 5022</p>
+              <p className="text-lg"><strong>Phone:</strong> 077 224 5022/ 033 7570277</p>
               <p className="text-lg"><strong>Location:</strong> No 243 Radawana Road, Delovita</p>
               <p className="text-lg"><strong>Mail:</strong> ab_zki@abansgroup.com</p>
             </div>

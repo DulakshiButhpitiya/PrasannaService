@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope,FaLock  } from "react-icons/fa";
 import '../Login&Registration/ForgotPass.css';
 
 const ForgotPass = () => {
@@ -12,6 +12,14 @@ const ForgotPass = () => {
           <div className="input-box">
             <input type="email" placeholder='Email Address' required />
             <FaEnvelope className='icon' />
+          </div>
+          <div className="input-box">
+            <input type="email" placeholder='New Password' required />
+            <FaLock className='icon' />
+          </div>
+          <div className="input-box">
+            <input type="email" placeholder='Confirm Password' required />
+            <FaLock className='icon' />
           </div>
           <button type="submit">Reset Password</button>
           <div className="register-link">

@@ -38,7 +38,7 @@ const Sidebar = () => {
         }}
       >
         <List>
-          <ListItem button component={Link} to="/admin/dashboard">
+          <ListItem button component={Link} to="">
             <ListItemIcon sx={{ color: 'white' }}>
               <DashboardIcon />
             </ListItemIcon>
@@ -50,20 +50,32 @@ const Sidebar = () => {
             </ListItemIcon>
             <ListItemText primary="Generate Invoice" />
           </ListItem>
-          <ListItem button component={Link} to="/admin/manageproduct">
+          {/* <ListItem button component={Link} to="/admin/manageproduct">
             <ListItemIcon sx={{ color: 'white' }}>
               <SettingsIcon />
             </ListItemIcon>
             <ListItemText primary="Manage Products" />
-          </ListItem>
-          <ListItem button component={Link} to="/admin/login">
+          </ListItem> */}
+          <ListItem button component={Link} to="/admin/clientprofile">
             <ListItemIcon sx={{ color: 'white' }}>
               <LockIcon />
             </ListItemIcon>
-            <ListItemText primary="Add Login" />
+            <ListItemText primary="Booking Deatils" />
+          </ListItem>
+          <ListItem button component={Link} to="/admin/dashboard">
+            <ListItemIcon sx={{ color: 'white' }}>
+              <LockIcon />
+            </ListItemIcon>
+            <ListItemText primary="Feed Back" />
+          </ListItem>
+          <ListItem button component={Link} to="/admin/sparepartsReg">
+            <ListItemIcon sx={{ color: 'white' }}>
+              <LockIcon />
+            </ListItemIcon>
+            <ListItemText primary="Parts Registration" />
           </ListItem>
           {/* Logout button */}
-          <ListItem button component={Link} to="/logout">
+          <ListItem button component={Link} to="/home">
             <ListItemIcon sx={{ color: 'white' }}>
               <ExitToAppIcon />
             </ListItemIcon>

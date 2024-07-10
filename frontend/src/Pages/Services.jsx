@@ -19,6 +19,7 @@ import Honda from '../component/Assets/honda.png';
 import KTM from '../component/Assets/ktm.png';
 import TVS from '../component/Assets/tvs.png';
 import Yamaha from '../component/Assets/yamaha.png';
+import MaintenanceCard from "../component/newComponent/MaintenanceCard";
 
   const makers = [
       { name: 'BAJAJ', logo: Bajaj },
@@ -31,14 +32,26 @@ import Yamaha from '../component/Assets/yamaha.png';
 const Services = () => {
   return (
   
-  <div className="aboutt">
-      <div
-        className="aboutTopp "
-        style={{ backgroundImage: `url(${MultiplePizzas})` }}
-      ></div>
-      <div style={{marginTop: "299px"}}>
+  <div className="aboutt"style={{ width: '1350px' }}>
+      <div className="aboutTop relative h-[70vh] bg-cover bg-center" style={{ backgroundImage: `url(${MultiplePizzas})` }}>
+      <h1 className="text-white text-4xl md:text-6xl font-bold absolute top-3/4 left-8 transform -translate-y-1/2 animate-fadeIn shadow-lg text-shadow">Our Services...</h1>
+      </div>
+     
         <div>
-          <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+        
+
+          <div className="flex max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10">
+            <div className="p-4 w-2/3"style={{ width: '999px' }}>
+              <h2 className="text-2xl font-semibold mb-4">Servicing & Repair</h2>
+              <p className="text-gray-700 mb-2">
+                "Experience top-notch bike services and repairs tailored to meet your every need at our bike service center. From routine maintenance checks to complex repairs, our team of skilled technicians ensures your bike performs at its best. Whether you're looking for a tune-up, brake adjustments, tire replacements, or comprehensive diagnostics, we've got you covered. With a commitment to quality and customer satisfaction, we strive to keep you riding smoothly and safely on the road."
+              </p>
+            </div>
+            <div className="w-1/3">
+              <img src={Servicing} alt="About Us" className="object-cover h-full w-full"/>
+            </div>
+          </div>
+          <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10"style={{ width: '799px' }}>
             <div className="p-4">
               <div className="flex justify-center mb-3">
                 <img src={Bike} alt="Motorbike" className="h-25 w-25 object-cover rounded-full shadow-lg"/>
@@ -61,26 +74,15 @@ const Services = () => {
               </ul>
               <p className="text-gray-700 font-bold mb-2 text-justify">Service related labour free on 5th service. 
 *Conditions apply <br/>
-Contact us on 0114700630</p>
+Contact us on 077 2245022</p>
             </div>
           </div>
 
-          <div className="flex max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10">
-            <div className="p-4 w-2/3">
-              <h2 className="text-2xl font-semibold mb-4">Servicing & Repair</h2>
-              <p className="text-gray-700 mb-2">
-                "Experience top-notch bike services and repairs tailored to meet your every need at our bike service center. From routine maintenance checks to complex repairs, our team of skilled technicians ensures your bike performs at its best. Whether you're looking for a tune-up, brake adjustments, tire replacements, or comprehensive diagnostics, we've got you covered. With a commitment to quality and customer satisfaction, we strive to keep you riding smoothly and safely on the road."
-              </p>
-            </div>
-            <div className="w-1/3">
-              <img src={Servicing} alt="About Us" className="object-cover h-full w-full"/>
-            </div>
-          </div>
           <ServiceTable/>
           {/* brand images */}
           <div className="bg-gray-50 py-10">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-2">Popular Vehicle Makers</h2>
+        <h2 className="text-3xl font-semibold mb-2">Popular Motorcycle Makers</h2>
         <p className="text-gray-600 mb-8">Select vehicles to suit your purse and need from your preferred Brand.</p>
         <div className="flex flex-wrap justify-center gap-4">
           {makers.map((maker) => (
@@ -92,36 +94,36 @@ Contact us on 0114700630</p>
         </div>
       </div>
     </div>
+    
           <section className="caviar-about-us-area section-padding-150" id="about">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-12 col-md-5">
-                  <div className="about-us-thumbnail wow fadeInUp" data-wow-delay="0.5s">
-                    <img src={About}  alt="About Us"/>
-                  </div>
+                 <h3>SO IS IT HARD TO MAINTAIN A MOTORCYCLE, AND WHERE DO YOU BEGIN?</h3>
                 </div>
-                  <div className="col-12 col-md-6 col-lg-5 ml-md-auto">
-                  <div className="section-heading">
-                    <h2>About Us</h2>
-                  </div>
-                  <div className="about-us-content">
-                    <span>restaurant style</span>
-                    <p>
-                      Sed commodo augue eu diam tincidunt, sit amet auctor lectus semper. Mauris porttitor diam at fringilla tempor. Integer molestie rhoncus nisi a euismod. Etiam scelerisque eu enim et vestibulum. Mauris finibus, eros a faucibus varius, dui risus mattis massa, sed lobortis ante ante eget justo. Nam eu dolor lorem. Praesent blandit leo sit amet velit accumsan ultrices. Vestibulum nec libero vel sapien dictum euismod eu ac justo.
-                    </p>
-                  </div>
-                </div> 
+                <p>How often does a motorcycle need maintenance? If you bought a brand new motorcycle, servicing it at recommended intervals (you’ll find those in the owner’s manual) should be more than enough. However, if you bought a second-hand bike or if you ride your motorcycle hard and often, being able to check it over and maintain it more frequently is usually a good idea.
+Ideally, you want to do a quick once-over every month or every couple of weeks, especially if you’re putting high miles on your bike. Even with brand new motorcycles, some parts can start showing signs of wear sooner than expected; in addition, things like engine oil, air filter, and oil filter may need replacing more frequently.
+The good news is, you can do most of the service on your own. To make sure your bike is in good condition, use this essential motorcycle maintenance checklist:
+</p>
+                   
               </div>
             </div>
           </section>
-        </div>
+    
          <div className="d-flex justify-content-around">
-          <Servicestype/>
-          <Servicestype/>
-          <Servicestype/> 
+         <MaintenanceCard/>
         </div> 
-      </div>
-    </div>
+        <section className="caviar-about-us-area section-padding-150" id="about">
+            <div className="container">
+              <div className="row align-items-center">
+                
+       <p> If you frequently check these seven points on your motorcycle, you’ll be able to maintain your bike on your own and avoid wear or breakdowns – and save on your service bill 💸.</p>
+       </div>
+       </div>
+       
+       </section>
+       </div>
+       </div>    
   )
 }
 

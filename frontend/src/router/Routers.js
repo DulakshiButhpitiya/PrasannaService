@@ -19,9 +19,13 @@ import BookingForm1 from "../component/newComponent/BookingForm1";
 import BookingForm2 from "../component/newComponent/BookingForm2";
 import BookingForm3 from "../component/newComponent/BookingForm3";
 import ForgotPass from "../component/Login&Registration/ForgotPass";
-import Sidebar from "../component/admincomponent/Sidebar/Sidebar";
-import { BrowserRouter as Switch } from 'react-router-dom';
+//import Sidebar from "../component/admincomponent/Sidebar/Sidebar";
+//import { BrowserRouter as Switch } from 'react-router-dom';
 import Invoice from "../Admin/Invoice";
+import Clientprofile from "../Admin/Clientprofile";
+import Feedback from "../Admin/Feedback";
+import SparepartsReg from "../Admin/SparepartsReg";
+
 
 const Routers = () => {
   return (
@@ -47,7 +51,9 @@ const Routers = () => {
         <Route path="/admin/Dashboard" element={<Dashboard />} />
         <Route path="/admin/invoice" element={<Invoice/>} />
         <Route path="/admin/Manageproduct" element={<Manageproduct />} />
-        
+        <Route path="/admin/clientprofile" element={<Clientprofile/>} />
+        <Route path="/admin/feedback" element={<Feedback/>} />
+        <Route path="/admin/sparepartsReg" element={<SparepartsReg/>} />
       </Route>
 
       {/* login&reg  */}

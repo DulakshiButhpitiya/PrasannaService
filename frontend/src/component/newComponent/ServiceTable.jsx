@@ -6,13 +6,13 @@ const ServiceTable = () => {
     <h2 className="text-3xl font-bold mb-4">OUR SERVICE PACKAGES</h2>
     <table className="min-w-full border-collapse border border-gray-300">
       <thead>
-        <tr className="bg-purple-800 text-white">
+        <tr className="bg-gray-800 text-white">
           <th className="border border-gray-300 p-2"></th>
           <th className="border border-gray-300 p-2"></th>
           <th colSpan="3" className="border border-gray-300 p-2">Short Service</th>
           <th className="border border-gray-300 p-2">Full Service</th>
         </tr>
-        <tr className="bg-purple-700 text-white">
+        <tr className="bg-gray-700 text-white">
           <th className="border border-gray-300 p-2">SMC Service GUIDE Pricing</th>
           <th className="border border-gray-300 p-2"></th>
           <th className="border border-gray-300 p-2">Bronze Service</th>
@@ -54,14 +54,14 @@ const ServiceTable = () => {
           <td className="border border-gray-300 p-2">3450.00</td>
           <td className="border border-gray-300 p-2">3650.00</td>
         </tr>
-        <tr className="bg-purple-700 text-white"><thead> <th className="border border-gray-300 p-2">Validity in Kms from the date of purchase</th> </thead>
+        <tr className="bg-gray-800 text-white"><thead> <th className="border border-gray-300 p-2">Validity in Kms from the date of purchase</th> </thead>
         <td className="border border-gray-300 p-2">500-750 </td>
         <td className="border border-gray-300 p-2">500-750 </td>
         <td className="border border-gray-300 p-2">500-750 </td>
         <td className="border border-gray-300 p-2">500-750 </td>
         <td className="border border-gray-300 p-2">500-750 </td></tr>
 
-        <tr className="bg-purple-700 text-white"><thead> <th className="border border-gray-300 p-2">Validity in Days from the date of previous service</th> </thead>
+        <tr className="bg-gray-800 text-white"><thead> <th className="border border-gray-300 p-2">Validity in Days from the date of previous service</th> </thead>
         <td className="border border-gray-300 p-2">60 </td>
         <td className="border border-gray-300 p-2">100 </td>
         <td className="border border-gray-300 p-2">100 </td>
