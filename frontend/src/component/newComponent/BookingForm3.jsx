@@ -704,7 +704,7 @@
               <option value="">Choose...</option>
               <option>Maestro</option>
               <option>Pleasure</option>
-              <option>I Smart</option>
+              <option>I Smart </option>
               <option>Discovery</option>
             </Form.Select>
             <Form.Control.Feedback type="invalid">{errors.bikeModel}</Form.Control.Feedback>
