@@ -5,6 +5,8 @@ import BookingTable from '../component/newComponent/BookingTable'
   const Clientprofile = () => {
     return (
       
+
+      
         <BookingTable/>
      
     );
