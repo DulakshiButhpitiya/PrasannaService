@@ -586,7 +586,7 @@
       const selectedTime = event.target.value;
       const selectedDateTime = new Date(selectedDate);
       const selectedDateTimeString = format(selectedDateTime, 'MMMM d, yyyy');
-      setConfirmationMessage(You selected a booking at ${selectedTime} on ${selectedDateTimeString});
+      setConfirmationMessage('You selected a booking at ${selectedTime} on ${selectedDateTimeString}');
       setFormData((prevData) => ({
         ...prevData,
         selectedTimeSlot: selectedTime,
