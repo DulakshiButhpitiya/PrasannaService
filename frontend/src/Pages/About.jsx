@@ -11,7 +11,7 @@ import MaintenanceCard from "../component/newComponent/MaintenanceCard";
 const About = () => {
   return (
     <div className="about" style={{ width: '1350px' }}>
-      <div className="aboutTop relative h-[15vh] bg-cover bg-center" style={{ backgroundImage: `url(${MultiplePizzas})` }}>
+      <div className="aboutTop relative h-[70vh] bg-cover bg-center" style={{ backgroundImage: `url(${MultiplePizzas})` }}>
         <h1 className="text-white text-4xl md:text-6xl font-bold absolute top-3/4 left-8 transform -translate-y-1/2 animate-fadeIn shadow-lg text-shadow">Getting to know us...</h1>
       </div>
       <div className="aboutBottom p-8 bg-gray-100">

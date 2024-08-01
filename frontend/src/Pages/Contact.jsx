@@ -71,7 +71,7 @@ const Contact = () => {
       {/* Main Content */}
       <div className="relative z-10">
         {/* Contact Form */}
-        <div className="relative flex justify-center items-center w-full min-h-screen bg-blue-500 overflow-hidden"style={{ width: '1500px' }}>
+        <div className="relative flex justify-center items-center w-full min-h-screen bg-blue-500 overflow-hidden"style={{ width: '1350px' }}>
           {/* Video Background */}
           <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
             <source src={backgroundVideo} type="video/mp4" />
